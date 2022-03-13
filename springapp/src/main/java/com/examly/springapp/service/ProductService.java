@@ -12,6 +12,7 @@ public class ProductService {
     @Autowired
     private ProductRepository productRepository;
 
+    //Retrieve ALL products
     public List<Product> getAllProducts() {
 
         List<Product> products = new ArrayList<>();
@@ -21,7 +22,23 @@ public class ProductService {
 		return products;
     }
 
+    //Add a Product
     public void productSave(Product product) {
+        productRepository.save(product);
+    }
+
+    //Delete a Product
+    public void productDelete(String id) {
+        productRepository.deleteById(id);
+    }
+
+    //Retireve a single Product
+    public Optional<Product> productEditData(String id) {
+        return productRepository.findById(id);
+    }
+
+    //Edit a Product
+    public void productEditSave(Product product, String id) {
         productRepository.save(product);
     }
     

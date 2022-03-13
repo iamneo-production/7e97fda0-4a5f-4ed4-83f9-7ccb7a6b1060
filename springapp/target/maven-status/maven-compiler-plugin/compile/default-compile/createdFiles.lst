@@ -1,5 +1,9 @@
-com/examly/springapp/repository/LoginRepository.class
 com/examly/springapp/models/Login.class
-com/examly/springapp/service/LoginService.class
+com/examly/springapp/repository/ProductRepository.class
+com/examly/springapp/service/ProductService.class
+com/examly/springapp/controllers/ProductController.class
+com/examly/springapp/models/Product.class
 com/examly/springapp/SpringappApplication.class
+com/examly/springapp/repository/LoginRepository.class
+com/examly/springapp/service/LoginService.class
 com/examly/springapp/controllers/LoginController.class
