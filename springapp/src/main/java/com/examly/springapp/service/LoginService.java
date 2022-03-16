@@ -23,6 +23,8 @@ public class LoginService {
             Login userDetails = details.get();
             String dbEmail = userDetails.getEmail();
             String dbPassword = userDetails.getPassword();
+            
+            //Validating user credential
             if( (email.equals(dbEmail)) && (password.equals(dbPassword)) ){
                 return true;
             }

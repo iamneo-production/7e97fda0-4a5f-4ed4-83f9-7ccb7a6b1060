@@ -32,7 +32,7 @@ public class ProductService {
         productRepository.deleteById(id);
     }
 
-    //Retireve a single Product
+    //Retrieve a single Product
     public Optional<Product> productEditData(String id) {
         return productRepository.findById(id);
     }
