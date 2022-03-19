@@ -14,7 +14,7 @@ public class OrderService {
     private OrderRepository orderRepository;
 
     public List<Order> getUserProducts(String id) {
-        return null;
+        return orderRepository.findByUserId(id);
     }
 
     public void saveProduct(String id) {

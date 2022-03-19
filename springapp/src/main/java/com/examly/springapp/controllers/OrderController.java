@@ -16,12 +16,14 @@ public class OrderController {
     @Autowired
     private OrderService orderService;
 
-    @RequestMapping("/orders/{id}")
+    //Return List of orders based on userId
+    @RequestMapping("/orders")
     public List<Order> getUserProducts(@PathVariable String id){
         return orderService.getUserProducts(id);
     }
 
-    @RequestMapping(method = RequestMethod.POST, value = "/saveOrder/{id}")
+    //Save cart items as orders
+    @RequestMapping(method = RequestMethod.POST, value = "/saveOrder")
     public void saveProduct(@PathVariable String id){
         orderService.saveProduct(id);
     }
