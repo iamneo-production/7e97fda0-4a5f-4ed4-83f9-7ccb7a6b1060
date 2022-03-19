@@ -1,0 +1,41 @@
+<div class="mainContainer">
+    <div #loginBox class="loginContainer">
+      <div class="heading">LOGIN</div>
+      <div>
+        <mat-form-field appearance="outline" class="email">
+          <mat-label>Email</mat-label>
+          <input #email type="email" matInput required />
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="outline" class="password">
+          <mat-label>Password</mat-label>
+          <input #password type="password" matInput required />
+        </mat-form-field>
+      </div>
+      <div>
+          <mat-radio-group class="roleButton" aria-label="Select an option" color="primary">
+              <mat-radio-button #admin value="admin" (change)="getRole(admin.value)">Admin</mat-radio-button>
+              <mat-radio-button #customer value="customer" (change)="getRole(customer.value)">Customer</mat-radio-button>
+          </mat-radio-group>
+      </div>
+      <button
+        #submitButton
+        class="loginButton"
+        mat-raised-button
+        color="primary"
+        (click)="getInfo(email.value, password.value)"
+      >
+        LOGIN
+      </button>
+      <p class="signupText">
+        New to Bookstore? <a href="" #signupLink class="signupLink">Click here</a>
+      </p>
+    </div>
+    <img
+      class="imageContainer"
+      src="../../assets/loginImages/E-Book-login.svg"
+      alt="Login Image"
+    />
+</div>
+  

@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Open+Sans&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+.mainContainer{
+    font-family: 'Open Sans', sans-serif;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.heading{
+    font-size: 50px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.loginContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.email,.password{
+    width: 350px;
+}
+.loginButton{
+    font-family: 'Open Sans', sans-serif;
+    width: 30%;
+    font-size: 20px;
+    margin: auto;
+}
+.roleButton{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content:space-around;
+}
+.imageContainer{
+    width: 35%;
+}
+.signupText{
+    margin: auto;
+    margin-top: 15px;
+}
+@media only screen and (max-width: 1024px) {
+    .heading{
+        font-size: 35px;
+    }
+    .email,.password{
+        width: 275px;
+    }
+    .imageContainer{
+        width: 430px;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .mainContainer{
+        display: flex;
+        flex-direction: column;
+    }
+    .heading{
+        font-size: 40px;
+    }
+    .email,.password{
+        width: 300px;
+    }
+    .loginButton{
+        font-family: 'Open Sans', sans-serif;
+        width: 35%;
+        font-size: 20px;
+        margin: auto;
+    }
+    .imageContainer{
+        width: 370px;
+    }
+}
