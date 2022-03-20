@@ -17,10 +17,10 @@
     justify-content: center;
     flex-direction: column;
 }
-.email,.password{
+.email,.password, .userName, .mobileNumber, .confirmPassword{
     width: 350px;
 }
-.loginButton{
+.signupButton{
     font-family: 'Open Sans', sans-serif;
     width: 30%;
     font-size: 20px;
@@ -37,11 +37,15 @@
     .heading{
         font-size: 35px;
     }
-    .email,.password{
+    .email,.password, .userName, .mobileNumber, .confirmPassword{
         width: 275px;
     }
     .imageContainer{
         width: 430px;
+    }
+    .signupButton{
+        width: 35%;
+        font-size: 18px;
     }
 }
 @media only screen and (max-width: 400px) {
@@ -52,16 +56,14 @@
     .heading{
         font-size: 40px;
     }
-    .email,.password{
+    .email,.password, .userName, .mobileNumber, .confirmPassword{
         width: 300px;
     }
-    .loginButton{
-        font-family: 'Open Sans', sans-serif;
+    .signupButton{
         width: 35%;
         font-size: 20px;
-        margin: auto;
     }
     .imageContainer{
-        width: 370px;
+        width: 280px;
     }
 }

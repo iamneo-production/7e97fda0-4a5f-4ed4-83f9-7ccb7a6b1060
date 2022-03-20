@@ -11,25 +11,10 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  role: string = "";
   
-  getRole = (event: any) => {
-    this.role = event;
-  }
   
   getInfo = (email: String, password: String) => {
-    if(email.search("@") > 0) {
-      if(password.length > 5){
-        console.log(email, password, this.role);
-      }
-      else{ 
-        alert("Please enter a valid Password!");
-      }
-    }
-    else{
-      alert("Please enter a valid Email!");
-    }
+      console.log(email, password);
   }
 
 }
