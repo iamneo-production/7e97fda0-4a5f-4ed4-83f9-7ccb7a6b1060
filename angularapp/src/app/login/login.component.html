@@ -1,5 +1,5 @@
 <p>login</p>
-<form>
+<form #loginform= "ngForm" (ngSubmit)="loginUser()" >
     <div class="form-group">
       <label for="email">Email address:</label>
       <input type="email" class="form-control" id="email">
