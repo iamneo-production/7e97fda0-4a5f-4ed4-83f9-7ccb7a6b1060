@@ -1,13 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
+//Components
 import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SignupComponent } from './signup/signup.component';
 import { HomeComponent } from './home/home.component';
-
+import { CartComponent } from './cart/cart.component';
+import { CustomerNavComponent } from './customer-nav/customer-nav.component';
+import { UserOrderComponent } from './user-order/user-order.component';
+import { ModelComponent } from './model/model.component';
 
 //Material UI modules
 import {MatInputModule} from '@angular/material/input';
@@ -26,7 +30,11 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     AppComponent,
     LoginComponent,
     SignupComponent,
-    HomeComponent
+    HomeComponent,
+    CartComponent,
+    CustomerNavComponent,
+    UserOrderComponent,
+    ModelComponent
   ],
   imports: [
     BrowserModule,
