@@ -1,0 +1,45 @@
+<div class="mainContainer">
+  <div #addBookBody class="loginContainer">
+    <div class="heading">ADD PRODUCT</div>
+    <div>
+      <mat-form-field appearance="outline" class="productName">
+        <mat-label>Product Name</mat-label>
+        <input #bookName type="text" matInput required />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline" class="productPrice">
+        <mat-label>Product Price</mat-label>
+        <input #bookPrice type="text" matInput required />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field class="productDescription" appearance="outline">
+        <mat-label #bookDescription>Product Description</mat-label>
+        <textarea matInput placeholder="Ex. It is the Best Book..."></textarea>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline" class="bookImageURL">
+        <mat-label>Image URL</mat-label>
+        <input #bookImageURL type="text" matInput required />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline" class="productQuantity">
+        <mat-label>Product Quantity</mat-label>
+        <input #bookQuantity type="text" matInput required />
+      </mat-form-field>
+    </div>
+
+    <button #addBookButton class="addButton" mat-raised-button color="primary">
+      ADD
+    </button>
+  </div>
+  <img
+    class="imageContainer"
+    src="../../../assets/addProductImages/E-Book-addProduct.svg"
+    alt="Add Product Image"
+  />
+</div>
+

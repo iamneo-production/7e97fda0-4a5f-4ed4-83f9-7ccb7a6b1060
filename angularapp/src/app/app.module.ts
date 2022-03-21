@@ -12,6 +12,12 @@ import { CartComponent } from './cart/cart.component';
 import { CustomerNavComponent } from './customer-nav/customer-nav.component';
 import { UserOrderComponent } from './user-order/user-order.component';
 import { ModelComponent } from './model/model.component';
+import { AddproductComponent } from './admin/addproduct/addproduct.component';
+import { AdminNavComponent } from './admin/admin-nav/admin-nav.component';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { OrderlistComponent } from './admin/orderlist/orderlist.component';
+import { ProductEditComponent } from './admin/product-edit/product-edit.component';
+
 
 //Material UI modules
 import {MatInputModule} from '@angular/material/input';
@@ -23,6 +29,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { AdminComponent } from './admin/admin.component';
 
 
 @NgModule({
@@ -34,7 +41,13 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     CartComponent,
     CustomerNavComponent,
     UserOrderComponent,
-    ModelComponent
+    ModelComponent,
+    AdminComponent,
+    AddproductComponent,
+    AdminNavComponent,
+    DashboardComponent,
+    OrderlistComponent,
+    ProductEditComponent
   ],
   imports: [
     BrowserModule,
