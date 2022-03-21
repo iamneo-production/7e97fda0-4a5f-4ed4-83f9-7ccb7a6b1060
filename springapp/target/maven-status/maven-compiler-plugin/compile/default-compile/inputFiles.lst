@@ -9,7 +9,6 @@
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/controllers/CartController.java
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/service/CartService.java
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/service/ProductService.java
-/home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/models/Column.java
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/models/Order.java
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/service/OrderService.java
 /home/coder/project/workspace/springapp/src/main/java/com/examly/springapp/models/Product.java

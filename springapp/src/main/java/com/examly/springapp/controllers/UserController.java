@@ -15,6 +15,7 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    //Adding credentials to userModel
     @RequestMapping(method = RequestMethod.POST, value = "/signup")
     public boolean saveUser(@RequestBody User user){
         return userService.saveUser(user);

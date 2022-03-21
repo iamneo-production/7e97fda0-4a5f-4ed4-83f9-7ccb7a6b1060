@@ -18,12 +18,17 @@ public class UserService {
     
     public boolean saveUser(User user) {
         String email = user.getEmail();
+        
+        //Checking wheather user already exists
         if(loginService.checkEmail(email) == true){
             return false;
         }
 
-        Login tempLogin = new Login(user.getEmail(), user.getPassword(), user.getRole());
+        Login tempLogin = new Login(user.getEmail(), user.getPassword());
+        //Adding credentials to loginModel
         loginService.addUser(tempLogin);
+
+        //Adding credentials to userModel
         userRepository.save(user);
         return true;
     }

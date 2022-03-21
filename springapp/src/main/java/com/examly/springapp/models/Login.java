@@ -14,17 +14,13 @@ public class Login {
     @Column(name = "password")
     private String password;
 
-    @Column(name = "role")
-    private String role;
-
     public Login() {
 
 	}
-	public Login(String email, String password, String role) {
+	public Login(String email, String password) {
 		super();
 		this.email = email;
 		this.password = password;
-        this.role = role;
 	}
 	
 	public String getEmail() {
@@ -39,11 +35,5 @@ public class Login {
     public void setPassword(String password) {
         this.password = password;
     }
-    public String getRole() {
-		return role;
-	}
-	public void setRole(String role) {
-        this.role = role;
-	}
     
 }

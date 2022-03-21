@@ -1,6 +1,5 @@
 com/examly/springapp/models/Login.class
 com/examly/springapp/models/User.class
-com/examly/springapp/models/Column.class
 com/examly/springapp/repository/UserRepository.class
 com/examly/springapp/service/ProductService.class
 com/examly/springapp/SpringappApplication.class

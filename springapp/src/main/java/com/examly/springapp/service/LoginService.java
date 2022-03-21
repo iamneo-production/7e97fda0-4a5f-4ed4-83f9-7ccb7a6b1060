@@ -16,17 +16,15 @@ public class LoginService {
 
         String email = login.getEmail();
         String password = login.getPassword();
-        String role = login.getRole();
 
         try{
             Optional<Login> details = loginRepository.findById(email);
             Login userDetails = details.get();
             String dbEmail = userDetails.getEmail();
             String dbPassword = userDetails.getPassword();
-            String dbRole = userDetails.getRole();
             
             //Validating user credential
-            if( (email.equals(dbEmail)) && (password.equals(dbPassword)) && (role.equals(dbRole))){
+            if( (email.equals(dbEmail)) && (password.equals(dbPassword)) ){
                 return true;
             }
             return false;
