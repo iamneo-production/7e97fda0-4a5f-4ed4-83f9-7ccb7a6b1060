@@ -2,9 +2,14 @@
 .mainContainer {
   font-family: "Open Sans", sans-serif;
   margin: 20px;
+  overflow-x: auto;
+}
+
+.mainContainer::-webkit-scrollbar{
+  width: 0;
 }
 .gridContainer {
-  width: 100%;
+  /* width: 100%; */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   background-color: rgb(255, 187, 0);
@@ -23,7 +28,7 @@
 .itemContainer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  width: 100%;
+  /* width: 100%; */
   background-color: rgb(238, 236, 228);
   padding: 20px;
   border-radius: 5px;
@@ -35,8 +40,6 @@
 .placeOrderButton {
   margin-top: 20px;
 }
-
-/* Responsive design for Mobile */
 @media only screen and (max-width: 400px) {
   .gridContainer {
     grid-template-columns: 200px 200px 200px 200px;

@@ -2,6 +2,11 @@
 .mainContainer {
   font-family: "Open Sans", sans-serif;
   margin: 20px;
+  overflow-x: auto;
+}
+
+.mainContainer::-webkit-scrollbar{
+  width: 0;
 }
 .gridContainer {
   width: 100%;
@@ -32,7 +37,6 @@
   border-radius: 5px;
 }
 
-/* Responsive design for Mobile  */
 @media only screen and (max-width: 400px) {
   .gridContainer {
     grid-template-columns: 200px 200px 200px 200px 200px;
