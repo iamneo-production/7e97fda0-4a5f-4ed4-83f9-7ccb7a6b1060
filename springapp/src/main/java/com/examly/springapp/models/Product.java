@@ -2,13 +2,19 @@ package com.examly.springapp.models;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 public class Product {
 
     @Id
-    @Column(name = "productId", unique = true, nullable = false)
+	@GeneratedValue(generator="system-uuid")
+	@GenericGenerator(name="system-uuid", strategy = "uuid")
+    @Column(name = "productId", unique = true)
 	private String productId;
 
     @Column(name = "imageUrl")
