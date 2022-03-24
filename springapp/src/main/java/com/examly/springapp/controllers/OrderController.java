@@ -8,8 +8,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import com.examly.springapp.service.OrderService;
 import com.examly.springapp.models.Order;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import java.util.*;
 
+// @CrossOrigin(origins = "https://8081-eaeeadbaffecdceaddadfedfeceadbceedce.examlyiopb.examly.io")
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 public class OrderController {
     

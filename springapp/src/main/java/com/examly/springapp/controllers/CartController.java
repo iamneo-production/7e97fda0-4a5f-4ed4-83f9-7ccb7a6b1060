@@ -1,6 +1,7 @@
 package com.examly.springapp.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,6 +11,8 @@ import com.examly.springapp.models.Cart;
 import com.examly.springapp.service.CartService;
 import java.util.*;
 
+// @CrossOrigin(origins = "https://8081-eaeeadbaffecdceaddadfedfeceadbceedce.examlyiopb.examly.io")
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 public class CartController {
     
