@@ -12,8 +12,8 @@ import com.examly.springapp.service.LoginService;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
 @RestController
-// @CrossOrigin(origins = "https://8081-eaeeadbaffecdceaddadfedfeceadbceedce.examlyiopb.examly.io")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://8081-eaeeadbaffecdceaddadfedfeceadbceedce.examlyiopb.examly.io")
+// @CrossOrigin(origins = "http://localhost:4200")
 class LoginController{
 
     @Autowired

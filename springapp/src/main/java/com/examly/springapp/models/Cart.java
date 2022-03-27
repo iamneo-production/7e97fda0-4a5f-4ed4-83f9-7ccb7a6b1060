@@ -4,13 +4,20 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.GeneratedValue;
+import org.hibernate.annotations.GenericGenerator;
 
-@Table
+
 @Entity
 public class Cart {
 	
 	@Id
-	@Column(name = "productId", unique = true, nullable = false)
+	@GeneratedValue(generator="system-uuid")
+	@GenericGenerator(name="system-uuid", strategy = "uuid")
+    @Column(name = "id", unique = true)
+	private String id;
+
+	@Column(name = "productId")
 	private String cartItemId;
 
 	@Column(name = "userId")
@@ -29,8 +36,9 @@ public class Cart {
 	public Cart() {
 		super();
 	}
-	public Cart(String cartItemId, String userId, String productName, String quantity, String price) {
+	public Cart(String id,String cartItemId, String userId, String productName, String quantity, String price) {
 		super();
+		this.id = id;
 		this.cartItemId = cartItemId;
 		this.userId = userId;
 		this.productName = productName;
@@ -38,6 +46,12 @@ public class Cart {
 		this.price = price;
 	}
 	
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
 	public String getCartItemId() {
 		return cartItemId;
 	}

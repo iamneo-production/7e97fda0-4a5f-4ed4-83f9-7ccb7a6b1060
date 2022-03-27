@@ -3,10 +3,12 @@ package com.examly.springapp.models;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Column;
+// import javax.persistence.GeneratedValue;
+// import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 public class User {
-	
+
     @Id
     @Column(name = "email", unique = true, nullable = false)
 	private String email;

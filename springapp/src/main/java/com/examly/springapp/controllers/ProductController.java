@@ -11,8 +11,8 @@ import com.examly.springapp.models.Product;
 import com.examly.springapp.service.ProductService;
 import java.util.*;
 
-// @CrossOrigin(origins = "https://8081-eaeeadbaffecdceaddadfedfeceadbceedce.examlyiopb.examly.io")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://8081-eaeeadbaffecdceaddadfedfeceadbceedce.examlyiopb.examly.io")
+// @CrossOrigin(origins = "http://localhost:4200")
 @RestController
 public class ProductController {
     
@@ -33,8 +33,8 @@ public class ProductController {
 
     //Adding a Product -> (Admin)
     @RequestMapping(method = RequestMethod.POST, value = "/admin/addProduct")
-    public void productSave(@RequestBody Product product){
-        productService.productSave(product);
+    public Product productSave(@RequestBody Product product){
+        return productService.productSave(product);
     }
 
     //Deleting a Product -> (Admin)
@@ -45,14 +45,20 @@ public class ProductController {
 
     //Getting details of one particular product -> (Admin)
     @RequestMapping("/admin/productEdit/{id}")
-    public Optional<Product> productEditData(@PathVariable String id){
-        return productService.productEditData(id);
+    public Optional<Product> getSingleProduct(@PathVariable String id){
+        return productService.getSingleProduct(id);
     }
 
     //Editing the product details -> (Admin)
     @RequestMapping(method = RequestMethod.POST, value = "/admin/productEdit/{id}")
     public void productEditSave(@RequestBody Product product, @PathVariable String id){
         productService.productEditSave(product, id);
+    }
+
+    //Getting details of one particular product -> (Customer)
+    @RequestMapping("/home/getProduct/{id}")
+    public Optional<Product> getSingleProductCustomer(@PathVariable String id){
+        return productService.getSingleProduct(id);
     }
 
 }

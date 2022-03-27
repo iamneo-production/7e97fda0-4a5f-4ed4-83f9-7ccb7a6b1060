@@ -23,8 +23,9 @@ public class ProductService {
     }
 
     //Add a Product
-    public void productSave(Product product) {
-        productRepository.save(product);
+    public Product productSave(Product product) {
+        Product tempProduct = productRepository.save(product);
+        return tempProduct;
     }
 
     //Delete a Product
@@ -33,7 +34,7 @@ public class ProductService {
     }
 
     //Retrieve a single Product
-    public Optional<Product> productEditData(String id) {
+    public Optional<Product> getSingleProduct(String id) {
         return productRepository.findById(id);
     }
 

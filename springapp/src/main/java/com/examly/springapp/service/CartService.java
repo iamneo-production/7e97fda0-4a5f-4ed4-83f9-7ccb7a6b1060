@@ -12,8 +12,8 @@ public class CartService {
     @Autowired
     private CartRepository cartRepository;
     
-    public void addToCart(Cart cart) {
-        cartRepository.save(cart);
+    public Cart addToCart(Cart cart) {
+        return cartRepository.save(cart);
     }
 
     public List<Cart> showCart(String id) {

@@ -11,19 +11,19 @@ import com.examly.springapp.models.Cart;
 import com.examly.springapp.service.CartService;
 import java.util.*;
 
-// @CrossOrigin(origins = "https://8081-eaeeadbaffecdceaddadfedfeceadbceedce.examlyiopb.examly.io")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://8081-eaeeadbaffecdceaddadfedfeceadbceedce.examlyiopb.examly.io")
+// @CrossOrigin(origins = "http://localhost:4200")
 @RestController
 public class CartController {
     
     @Autowired
     private CartService cartService;
 
-    //id -> productId
+    //id -> userId
     @RequestMapping(method = RequestMethod.POST, value = "/home/{id}")
-    public void addToCart(@RequestBody Cart cart, @PathVariable String id){
-        cart.setCartItemId(id);
-        cartService.addToCart(cart);
+    public Cart addToCart(@RequestBody Cart cart){
+        // cart.setUserId(id);
+        return cartService.addToCart(cart);
     }
 
     //id -> userId
