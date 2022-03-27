@@ -1,55 +1,55 @@
 <div class="mainContainer">
-    <div #signupBox class="loginContainer">
-      <div class="heading">SIGN UP</div>
+  <div #signupBox class="loginContainer">
+    <div class="heading">SIGN UP</div>
+    <form #signupForm = "ngForm" (ngSubmit)="formSubmit()">
       <div>
         <mat-form-field appearance="outline" class="email">
           <mat-label>Email</mat-label>
-          <input #email type="email" matInput required />
+          <input #email type="email" name="email" matInput required [(ngModel)]="user.email"/>
         </mat-form-field>
       </div>
       <div>
         <mat-form-field appearance="outline" class="userName">
           <mat-label>Username</mat-label>
-          <input #username type="text" matInput required />
+          <input #username type="text" matInput name="userName" required [(ngModel)]="user.userName"/>
         </mat-form-field>
       </div>
       <div>
         <mat-form-field appearance="outline" class="mobileNumber">
           <mat-label>Mobile Number</mat-label>
-          <input #mobilenumber type="text" matInput required />
+          <input #mobilenumber type="text" matInput name="mobileNo" required [(ngModel)]="user.mobileNo"/>
         </mat-form-field>
       </div>
       <div>
         <mat-form-field appearance="outline" class="password">
           <mat-label>Password</mat-label>
-          <input #password type="password" matInput required />
+          <input #password type="password" name="password" placeholder="" matInput required [(ngModel)]="user.password"/>
         </mat-form-field>
       </div>
       <div>
         <mat-form-field appearance="outline" class="confirmPassword">
           <mat-label>Confirm Password</mat-label>
-          <input #confirmpassword type="password" matInput required />
+          <input #confirmpassword type="password" name="conformPassword" matInput required [(ngModel)]="reEnteredpassword"/>
         </mat-form-field>
       </div>
-
+  
       <button
         #submitButton
         class="signupButton"
         mat-raised-button
         color="primary"
-        (click)="getInfo(email.value, username.value, mobilenumber.value, password.value, confirmpassword.value)"
       >
         SIGN UP
       </button>
-      <p class="signupText">
-        Already a member? <a href="" #signinLink class="loginLink">Click here</a>
-      </p>
-    </div>
-    <img
-      class="imageContainer"
-      src="../../assets/signupImages/E-Book-reading.svg"
-      alt="Login Image"
-
-    />
+    </form>
+    <p class="signupText">
+      Already a member?
+      <a routerLink="" #signinLink class="loginLink">Click here</a>
+    </p>
+  </div>
+  <img
+    class="imageContainer"
+    src="../../assets/signupImages/E-Book-reading.svg"
+    alt="Login Image"
+  />
 </div>
-  

@@ -30,8 +30,9 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { AdminComponent } from './admin/admin.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,7 +62,9 @@ import { AdminComponent } from './admin/admin.component';
     MatCardModule,
     MatGridListModule,
     MatIconModule,
-    MatToolbarModule
+    MatToolbarModule,
+    HttpClientModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

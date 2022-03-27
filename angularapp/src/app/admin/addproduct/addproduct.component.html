@@ -1,40 +1,52 @@
 <div class="mainContainer">
   <div #addBookBody class="loginContainer">
     <div class="heading">ADD PRODUCT</div>
-    <div>
-      <mat-form-field appearance="outline" class="productName">
-        <mat-label>Product Name</mat-label>
-        <input #bookName type="text" matInput required />
-      </mat-form-field>
-    </div>
-    <div>
-      <mat-form-field appearance="outline" class="productPrice">
-        <mat-label>Product Price</mat-label>
-        <input #bookPrice type="text" matInput required />
-      </mat-form-field>
-    </div>
-    <div>
-      <mat-form-field class="productDescription" appearance="outline">
-        <mat-label #bookDescription>Product Description</mat-label>
-        <textarea matInput placeholder="Ex. It is the Best Book..."></textarea>
-      </mat-form-field>
-    </div>
-    <div>
-      <mat-form-field appearance="outline" class="bookImageURL">
-        <mat-label>Image URL</mat-label>
-        <input #bookImageURL type="text" matInput required />
-      </mat-form-field>
-    </div>
-    <div>
-      <mat-form-field appearance="outline" class="productQuantity">
-        <mat-label>Product Quantity</mat-label>
-        <input #bookQuantity type="text" matInput required />
-      </mat-form-field>
-    </div>
+    <form #addProductform = "ngForm" (ngSubmit)="formSubmit()">
+      <div>
+        <mat-form-field appearance="outline" class="productName">
+          <mat-label>Product Name</mat-label>
+          <input #bookName type="text" name="productName" matInput required [(ngModel)]="product.productName"/>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="outline" class="productPrice">
+          <mat-label>Product Price</mat-label>
+          <input #bookPrice type="text" matInput name="price" required [(ngModel)]="product.price"/>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field class="productDescription" appearance="outline">
+          <mat-label #bookDescription>Product Description</mat-label>
+          <textarea
+            name="description"
+            matInput
+            placeholder="Ex. It is the Best Book..."
+            [(ngModel)]="product.description"
+          ></textarea>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="outline" class="bookImageURL">
+          <mat-label>Image URL</mat-label>
+          <input #bookImageURL type="text" matInput name="imageUrl" required [(ngModel)]="product.imageUrl"/>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="outline" class="productQuantity">
+          <mat-label>Product Quantity</mat-label>
+          <input #bookQuantity type="text" matInput name="quantity" required [(ngModel)]="product.quantity"/>
+        </mat-form-field>
+      </div>
 
-    <button #addBookButton class="addButton" mat-raised-button color="primary">
-      ADD
-    </button>
+      <button
+        #addBookButton
+        class="addButton"
+        mat-raised-button
+        color="primary"
+      >
+        ADD
+      </button>
+    </form>
   </div>
   <img
     class="imageContainer"
@@ -42,4 +54,3 @@
     alt="Add Product Image"
   />
 </div>
-
