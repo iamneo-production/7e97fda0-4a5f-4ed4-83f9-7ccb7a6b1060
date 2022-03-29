@@ -7,8 +7,9 @@
     <span class="title"><mat-icon>library_books</mat-icon>E-BOOK</span>
   </div>
   <div class="itemsContainer">
-    <a mat-button class="home item" #adminProductButton>Product</a>
-    <a mat-button class="cart item" #adminOrderButton>Orders</a>
-    <a mat-button color="warn" class="logout item" #logoutButton>Logout</a>
+    <a routerLink="/admin/addProduct" mat-button class="home item" #addProductButton>Add Book</a>
+    <a routerLink="../cart" mat-button class="home item" #adminProductButton>Product</a>
+    <a routerLink="../orders" mat-button class="cart item" #adminOrderButton>Orders</a>
+    <a routerLink="" mat-button color="warn" class="logout item" #logoutButton>Logout</a>
   </div>
 </mat-toolbar>

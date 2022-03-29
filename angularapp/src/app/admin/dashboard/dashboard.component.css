@@ -1,0 +1,41 @@
+.mainContainer {
+  height: 100%;
+}
+.homeImage {
+  width: 100%;
+  max-height: 65%;
+  margin-bottom: 20px;
+}
+.gridContainer {
+  margin: 20px;
+  display: grid;
+  
+  /* Making Responsive Design */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.card {
+  border-radius: 8px;
+  box-shadow: 0px 5px rgba(0, 0, 0, 0.2);
+}
+.cardTitle {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.cardPrice {
+  display: flex;
+  justify-content: space-around;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+.editIcon{
+    margin-right: 15px; 
+    font-size: 30px;
+}
+.deleteIcon{
+    margin-left: 15px; 
+    font-size: 30px;
+}
+.icons{
+    cursor: pointer;
+}

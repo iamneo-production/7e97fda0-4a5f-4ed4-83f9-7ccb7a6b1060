@@ -1,1 +1,28 @@
-<p>dashboard works!</p>
+<div>
+  <app-admin-nav></app-admin-nav>
+</div>
+<div class="mainContainer">
+  <div #bookHomeBody>
+    <div class="gridContainer">
+      <mat-card class="card" *ngFor="let product of productDetails">
+        <mat-card-header>
+          <mat-card-title class="cardTitle">{{
+            product.productName
+          }}</mat-card-title>
+        </mat-card-header>
+        <img
+          mat-card-image
+          src="{{ product.imageUrl }}"
+          alt="Product Image"
+        />
+        <mat-card-footer class="cardPrice">
+            <div>Rs-{{ product.price }}</div>
+            <div class="icons">
+                <mat-icon class="editIcon">edit</mat-icon>
+                <mat-icon class="deleteIcon">delete</mat-icon>
+            </div>
+        </mat-card-footer>
+      </mat-card>
+    </div>
+  </div>
+</div>

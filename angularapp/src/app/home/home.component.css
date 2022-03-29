@@ -1,6 +1,6 @@
 .mainContainer {
     height: 100%;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
   }
   .homeImage {
     width: 100%;
