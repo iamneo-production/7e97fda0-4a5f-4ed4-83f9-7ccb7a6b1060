@@ -39,8 +39,8 @@ public class ProductService {
     }
 
     //Edit a Product
-    public void productEditSave(Product product, String id) {
-        productRepository.save(product);
+    public Product productEditSave(Product product, String id) {
+        return productRepository.save(product);
     }
     
 }

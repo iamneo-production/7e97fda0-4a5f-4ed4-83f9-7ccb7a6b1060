@@ -51,8 +51,8 @@ public class ProductController {
 
     //Editing the product details -> (Admin)
     @RequestMapping(method = RequestMethod.POST, value = "/admin/productEdit/{id}")
-    public void productEditSave(@RequestBody Product product, @PathVariable String id){
-        productService.productEditSave(product, id);
+    public Product productEditSave(@RequestBody Product product, @PathVariable String id){
+        return productService.productEditSave(product, id);
     }
 
     //Getting details of one particular product -> (Customer)
