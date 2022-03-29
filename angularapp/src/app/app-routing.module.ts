@@ -9,6 +9,8 @@ import { AddproductComponent } from './admin/addproduct/addproduct.component';
 import { CartComponent } from './cart/cart.component';
 import { UserOrderComponent } from './user-order/user-order.component';
 import { ModelComponent } from './model/model.component';
+import {ProductEditComponent } from './admin/product-edit/product-edit.component'
+
 const routes: Routes = [
   {
     path:"",
@@ -42,6 +44,10 @@ const routes: Routes = [
   {
     path:"home/getProduct/:id",
     component: ModelComponent,
+  },
+  {
+    path:"admin/productEdit/:id",
+    component: ProductEditComponent,
   },
 
 ];

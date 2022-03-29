@@ -18,8 +18,8 @@
         <mat-card-footer class="cardPrice">
             <div>Rs-{{ product.price }}</div>
             <div class="icons">
-                <mat-icon class="editIcon">edit</mat-icon>
-                <mat-icon class="deleteIcon">delete</mat-icon>
+                <mat-icon class="editIcon" (click)="bookDetails(product.productName)">edit</mat-icon>
+                <mat-icon class="deleteIcon" (click)="deleteBook(product.productName)">delete</mat-icon>
             </div>
         </mat-card-footer>
       </mat-card>
