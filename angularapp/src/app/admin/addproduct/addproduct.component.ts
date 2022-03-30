@@ -25,6 +25,7 @@ export class AddproductComponent implements OnInit {
     });
   }
 
+  //Form validation
   formSubmit(){
     if(this.product.imageUrl == '' || this.product.productName == '' || this.product.price == '' || this.product.description == '' || this.product.quantity == ''){
       this.openSnackBar('Empty input fields','X');
@@ -43,7 +44,6 @@ export class AddproductComponent implements OnInit {
       else{
         this.openSnackBar('Unable to add product','X');
       }
-      // console.warn(result);
     })
   }
 }

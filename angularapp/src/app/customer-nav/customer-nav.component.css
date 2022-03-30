@@ -15,7 +15,7 @@
 }
 
 /* Responsive Design for Mobile */
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 430px) {
   .navBarContainer {
     flex-direction: column;
     height: 85px;

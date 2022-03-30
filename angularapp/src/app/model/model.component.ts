@@ -37,6 +37,7 @@ export class ModelComponent implements OnInit {
     this.cartDetails.price = this.product.price;
   }
   
+  //Adding the Product to cart
   addToCart(){
     console.log(this.cartDetails.productId);
     this.productData.addBookToCart(this.email, this.cartDetails).subscribe((result) => {
@@ -47,10 +48,8 @@ export class ModelComponent implements OnInit {
     })
   }
 
+  //Place an Order
   placeOrder(){
 
   }
-  
-  
-
 }

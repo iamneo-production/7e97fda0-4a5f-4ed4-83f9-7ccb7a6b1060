@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 
 //Components
 import { LoginComponent } from './login/login.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SignupComponent } from './signup/signup.component';
 import { HomeComponent } from './home/home.component';
 import { CartComponent } from './cart/cart.component';
@@ -17,9 +16,11 @@ import { AdminNavComponent } from './admin/admin-nav/admin-nav.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { OrderlistComponent } from './admin/orderlist/orderlist.component';
 import { ProductEditComponent } from './admin/product-edit/product-edit.component';
+import { AdminComponent } from './admin/admin.component';
 
 
 //Material UI modules
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
@@ -29,10 +30,9 @@ import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import { AdminComponent } from './admin/admin.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
-
 import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,

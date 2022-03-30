@@ -1,6 +1,5 @@
 .mainContainer {
     height: 100%;
-    /* overflow-y: scroll; */
   }
   .homeImage {
     width: 100%;
@@ -21,7 +20,7 @@
     transition: all 1s ease;
   }
   .card:hover{
-    transform: scale(1.1);
+    transform: scale(1.03);
   }
   .cardTitle {
     font-family: Georgia, "Times New Roman", Times, serif;

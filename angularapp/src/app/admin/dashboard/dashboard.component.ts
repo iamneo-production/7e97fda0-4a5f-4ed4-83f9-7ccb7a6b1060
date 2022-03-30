@@ -14,6 +14,7 @@ import {ModelService} from '../../services/Model/model.service';
 export class DashboardComponent implements OnInit {
 
   productDetails:any;
+
   AllproductDetails = [{
     productId:'',
     imageUrl:'',
@@ -22,6 +23,7 @@ export class DashboardComponent implements OnInit {
     description:'',
     quantity:''
   }]
+
   id = '';
   constructor(private _snackBar: MatSnackBar,private http: HttpClient, private router: Router, private edit: EditProductService, private userData: HomeService, private productData: ModelService) { }
 
@@ -40,6 +42,7 @@ export class DashboardComponent implements OnInit {
     })
   }
 
+  //Editing the Product
   bookDetails = (data: any) => {
     for(let i=0;i<this.AllproductDetails.length;i++) {
       if(this.AllproductDetails[i].productName === data){
@@ -54,6 +57,8 @@ export class DashboardComponent implements OnInit {
      
   }
 
+
+  //Deleting the Product
   deleteBook(data: any){
     for(let i=0;i<this.AllproductDetails.length;i++) {
       if(this.AllproductDetails[i].productName === data){

@@ -8,6 +8,7 @@ import baseUrl from '../Url';
 export class EditProductService {
   id:any;
   product: any;
+  
   constructor(private http: HttpClient) { }
 
   editSingleProductDetails(id:any, data: any) {

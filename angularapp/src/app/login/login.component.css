@@ -33,6 +33,8 @@
     margin: auto;
     margin-top: 15px;
 }
+
+/* Responsive design for Tablets */
 @media only screen and (max-width: 1024px) {
     .heading{
         font-size: 35px;
@@ -44,7 +46,9 @@
         width: 430px;
     }
 }
-@media only screen and (max-width: 400px) {
+
+/* Responsive design for Mobiles */
+@media only screen and (max-width: 430px) {
     .mainContainer{
         display: flex;
         flex-direction: column;

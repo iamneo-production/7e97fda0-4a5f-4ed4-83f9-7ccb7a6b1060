@@ -8,6 +8,7 @@ export class SignupService {
 
   constructor(private http: HttpClient) { }
 
+  //Add the New User
   saveUser(data: any){
     return this.http.post(`${baseUrl}/signup`, data);
   }

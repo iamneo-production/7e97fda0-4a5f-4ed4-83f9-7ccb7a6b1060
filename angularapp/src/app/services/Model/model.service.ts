@@ -18,6 +18,7 @@ export class ModelService {
     return this.product;
   }
 
+  //Add the product to Cart
   addBookToCart(id:any, data:any){
     return this.http.post(`${baseUrl}/home/${id}`, data);
   }

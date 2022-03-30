@@ -19,19 +19,23 @@ export class ProductEditComponent implements OnInit {
     description:'',
     quantity:''
   }
+
   id:any;
+  
   ngOnInit(): void {
     this.id = this.edit.getId();
     this.product = this.edit.getProduct();
     console.log(this.product);
   }
 
+  //Snackbar
   openSnackBar(message: string, action: string) {
     this._snackBar.open(message, action, {
       duration: 3000
     });
   }
 
+  //Form validation
   formSubmit(){
     if(this.product.imageUrl == '' || this.product.productName == '' || this.product.price == '' || this.product.description == '' || this.product.quantity == ''){
       this.openSnackBar('Empty input fields','X');
@@ -40,6 +44,7 @@ export class ProductEditComponent implements OnInit {
     this.editProductFormData(this.product);
   }
 
+  //Editing the Product
   editProductFormData(productData: any){
     this.edit.editSingleProductDetails(this.id, productData).subscribe((result) => {
       this.openSnackBar('Edits Saved Successfully','X');

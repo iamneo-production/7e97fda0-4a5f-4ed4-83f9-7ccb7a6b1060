@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HomeService } from '../services/Home/home.service';
 import {ModelService} from '../services/Model/model.service';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -11,6 +12,7 @@ import {ModelService} from '../services/Model/model.service';
 export class HomeComponent implements OnInit {
 
   productDetails:any;
+
   AllproductDetails = [{
     productId:'',
     imageUrl:'',
@@ -19,6 +21,7 @@ export class HomeComponent implements OnInit {
     description:'',
     quantity:''
   }]
+
   id = '';
   constructor(private http: HttpClient, private router: Router, private userData: HomeService, private productData: ModelService) { }
 
@@ -30,6 +33,7 @@ export class HomeComponent implements OnInit {
     })
   }
 
+  //Retrieving All Books
   bookDetails = (data: any) => {
     for(let i=0;i<this.AllproductDetails.length;i++) {
       if(this.AllproductDetails[i].productName === data){

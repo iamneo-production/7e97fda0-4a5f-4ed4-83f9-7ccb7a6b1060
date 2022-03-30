@@ -56,7 +56,7 @@
 }
 
 /* Resonsive design for Mobiles */
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 430px) {
   .mainContainer {
     display: flex;
     flex-direction: column;

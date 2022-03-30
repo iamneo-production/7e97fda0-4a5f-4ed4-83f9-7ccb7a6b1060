@@ -8,8 +8,9 @@ export class LoginService {
 
   constructor(private http: HttpClient) {
 
-   }
+  }
 
+  //Check wheather user is Present or Not
   checkUser(data: any) {
     return this.http.post(`${baseUrl}/login`, data);
   }
