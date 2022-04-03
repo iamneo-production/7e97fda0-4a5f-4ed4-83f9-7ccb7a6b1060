@@ -3,7 +3,6 @@ package com.examly.springapp.models;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.Table;
 import javax.persistence.GeneratedValue;
 import org.hibernate.annotations.GenericGenerator;
 

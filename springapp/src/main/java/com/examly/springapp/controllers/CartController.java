@@ -33,7 +33,7 @@ public class CartController {
     }
 
     //id -> productId
-    @RequestMapping(method = RequestMethod.POST, value = "/cart/delete/{id}")
+    @RequestMapping("/cart/delete/{id}")
     public void deleteCartItem(@PathVariable String id){
         cartService.deleteCartItem(id);
     }

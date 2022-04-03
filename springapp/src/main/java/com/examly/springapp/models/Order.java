@@ -1,14 +1,20 @@
 package com.examly.springapp.models;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
+import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.Column;
 
+@Table(name = "OrderModel")
 @Entity
 public class Order {
 	
 	@Id
-    @Column(name = "orderId", unique = true, nullable = false)
+	@GeneratedValue(generator="system-uuid")
+	@GenericGenerator(name="system-uuid", strategy = "uuid")
+    @Column(name = "orderId", unique = true)
 	private String orderId;
 
 	@Column(name = "userId")
@@ -30,7 +36,7 @@ public class Order {
 	private String price;
 	
 	public Order() {
-		super();
+		
 	}
 	public Order(String orderId, String userId, String productName, String quantity, String totalPrice, String status,
 			String price) {
@@ -43,6 +49,7 @@ public class Order {
 		this.status = status;
 		this.price = price;
 	}
+
 	public String getOrderId() {
 		return orderId;
 	}
@@ -85,8 +92,4 @@ public class Order {
 	public void setPrice(String price) {
 		this.price = price;
 	}
-	
-	 
-	
 }
-
