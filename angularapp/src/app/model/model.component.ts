@@ -43,13 +43,13 @@ export class ModelComponent implements OnInit {
     this.productData.addBookToCart(this.email, this.cartDetails).subscribe((result) => {
       if(result != null){
         this.openSnackBar('Added to cart','X');
-        this.router.navigate(['home/cart', this.email])
+        this.router.navigate(['cart', this.email]);
       }
     })
   }
 
   //Place an Order
   placeOrder(){
-
+    this.openSnackBar('Order Placed','X');
   }
 }

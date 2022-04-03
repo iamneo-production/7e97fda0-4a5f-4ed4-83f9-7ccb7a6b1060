@@ -9,16 +9,16 @@
       <div class="subHeading">Quantity</div>
       <div class="subHeading">Delete</div>
     </div>
-    <div class="itemContainer">
-      <div class="items">Rich Dad Poor Dad</div>
-      <div class="items">2000</div>
-      <div class="items">20</div>
+    <div class="itemContainer" *ngFor="let product of cartDetails">
+      <div class="items">{{product.productName}}</div>
+      <div class="items">{{product.price}}</div>
+      <div class="items">{{product.quantity}}</div>
       <div class="items">
-        <mat-icon class="deleteButton" color="warn">delete</mat-icon>
+        <mat-icon class="deleteButton" color="warn" (click)="deleteCartItem(product.id)">delete</mat-icon>
       </div>
     </div>
   </div>
-  <button mat-raised-button color="primary" class="placeOrderButton">
+  <button mat-raised-button color="primary" class="placeOrderButton" (click)="placeOrder()">
     Place Order
     <mat-icon>send</mat-icon>
   </button>
