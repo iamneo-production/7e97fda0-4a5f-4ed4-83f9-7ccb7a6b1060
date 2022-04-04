@@ -10,6 +10,6 @@
     <a routerLink="/home" mat-button class="home item" #bookHomeButton>Home</a>
     <a routerLink="../cart" mat-button class="cart item" #bookCartButton>Cart</a>
     <a routerLink="../orders" mat-button class="myOrder item" #bookOrderButton>Myorder</a>
-    <a routerLink="" mat-button color="warn" class="logout item" #logoutButton>Logout</a>
+    <a (click)="logout()" mat-button color="warn" class="logout item" #logoutButton>Logout</a>
   </div>
 </mat-toolbar>

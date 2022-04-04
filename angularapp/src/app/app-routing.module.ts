@@ -28,26 +28,32 @@ const routes: Routes = [
   {
     path:"admin",
     component: DashboardComponent,
+    canActivate:[AuthGuard],
   },
   {
     path:"admin/addProduct",
     component: AddproductComponent,
+    canActivate:[AuthGuard],
   },
   {
     path:"orders",
     component: UserOrderComponent,
+    canActivate:[AuthGuard],
   },
   {
     path:"cart/:id",
     component: CartComponent,
+    canActivate:[AuthGuard],
   },
   {
     path:"home/getProduct/:id",
     component: ModelComponent,
+    canActivate:[AuthGuard],
   },
   {
     path:"admin/productEdit/:id",
     component: ProductEditComponent,
+    canActivate:[AuthGuard],
   },
 
 ];

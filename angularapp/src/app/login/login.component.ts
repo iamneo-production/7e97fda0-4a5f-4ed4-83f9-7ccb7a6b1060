@@ -35,10 +35,10 @@ export class LoginComponent implements OnInit {
       this.openSnackBar('Empty input fields','X');
       return;
     }
-    console.warn(this.user);
 
     //Entering into admin portal
     if(this.user.email === "admin" || this.user.password == "admin"){
+      localStorage.setItem('token',"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c");
       this.openSnackBar('Admin portal','X');
       this.router.navigate(['admin']);
     }
