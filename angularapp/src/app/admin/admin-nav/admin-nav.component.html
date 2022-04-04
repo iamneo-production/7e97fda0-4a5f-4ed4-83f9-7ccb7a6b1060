@@ -8,8 +8,8 @@
   </div>
   <div class="itemsContainer">
     <a routerLink="/admin/addProduct" mat-button class="home item" #addProductButton>Add Book</a>
-    <a routerLink="../cart" mat-button class="home item" #adminProductButton>Product</a>
-    <a routerLink="../orders" mat-button class="cart item" #adminOrderButton>Orders</a>
+    <a routerLink="../admin" mat-button class="product item" #adminProductButton>Product</a>
+    <a routerLink="../orders" mat-button class="orders item" #adminOrderButton>Orders</a>
     <a (click)="logout()" mat-button color="warn" class="logout item" #logoutButton>Logout</a>
   </div>
 </mat-toolbar>
