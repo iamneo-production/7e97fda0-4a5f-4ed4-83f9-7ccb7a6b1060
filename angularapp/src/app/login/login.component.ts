@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit {
 
     //Entering into admin portal
     if(this.user.email === "admin" || this.user.password == "admin"){
-      localStorage.setItem('token',"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c");
+      localStorage.setItem('token',"randomToken");
       this.openSnackBar('Admin portal','X');
       this.router.navigate(['admin']);
     }
@@ -53,7 +53,7 @@ export class LoginComponent implements OnInit {
       if(result==true)
       {
         localStorage.setItem('email', this.user.email);
-        localStorage.setItem('token',"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c");
+        localStorage.setItem('token',"randomToken");
         this.router.navigate(['home']);
       }
       else{

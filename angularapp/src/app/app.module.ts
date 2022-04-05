@@ -16,7 +16,6 @@ import { AdminNavComponent } from './admin/admin-nav/admin-nav.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { OrderlistComponent } from './admin/orderlist/orderlist.component';
 import { ProductEditComponent } from './admin/product-edit/product-edit.component';
-import { AdminComponent } from './admin/admin.component';
 
 
 //Material UI modules
@@ -43,7 +42,6 @@ import { HttpClientModule } from '@angular/common/http';
     CustomerNavComponent,
     UserOrderComponent,
     ModelComponent,
-    AdminComponent,
     AddproductComponent,
     AdminNavComponent,
     DashboardComponent,
