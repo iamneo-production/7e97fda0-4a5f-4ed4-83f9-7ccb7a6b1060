@@ -12,7 +12,6 @@ import com.examly.springapp.service.CartService;
 import java.util.*;
 
 @CrossOrigin(origins = "https://8081-eaeeadbaffecdceaddadfedfeceadbceedce.examlyiopb.examly.io")
-// @CrossOrigin(origins = "http://localhost:4200")
 @RestController
 public class CartController {
     

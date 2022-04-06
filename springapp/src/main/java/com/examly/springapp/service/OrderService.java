@@ -13,21 +13,21 @@ public class OrderService {
     @Autowired
     private OrderRepository orderRepository;
 
-    // public List<Order> getUserProducts(String id) {
-    //     return orderRepository.findByUserId(id);
-    // }
+    public List<Order> getUserProducts(String id) {
+        return orderRepository.findByUserId(id);
+    }
 
-    // public void saveProduct(String id) {
+    public void saveProduct(String id) {
 
-    // }
+    }
 
-    // public void placeOrder(Order order) {
+    public void placeOrder(Order order) {
 
-    // }
+    }
 
-    // public List<Order> getAllUsersProducts() {
-    //     return orderRepository.findAll();
-    // }
+    public List<Order> getAllUsersProducts() {
+        return (List<Order>) orderRepository.findAll();
+    }
     
 }
 

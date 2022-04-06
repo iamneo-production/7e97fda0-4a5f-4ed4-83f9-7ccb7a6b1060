@@ -12,14 +12,17 @@ public class CartService {
     @Autowired
     private CartRepository cartRepository;
     
+    //Adding item to cart
     public Cart addToCart(Cart cart) {
         return cartRepository.save(cart);
     }
 
+    //Retrieve All items from cart for paticular userId
     public List<Cart> showCart(String id) {
         return cartRepository.findByUserId(id);
     }
 
+    //Delete the cart item
     public void deleteCartItem(String id) {
         cartRepository.deleteById(id);
     }
